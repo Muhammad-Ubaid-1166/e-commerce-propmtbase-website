@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Product Creation Mode - TechMart</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #000000 0%, #0066CC 50%, #87CEEB 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #0066CC;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 12px 0;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-manual {
+      background: linear-gradient(135deg, #0066CC 0%, #87CEEB 100%);
+      color: #fff;
+    }
+    .btn-manual:hover {
+      background: linear-gradient(135deg, #000000 0%, #0066CC 100%);
+    }
+
+    .btn-agent {
+      background: linear-gradient(135deg, #111111 0%, #444444 100%);
+      color: #fff;
+    }
+    .btn-agent:hover {
+      background: linear-gradient(135deg, #0066CC 0%, #000000 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Choose Product Creation Mode</h1>
+    <p>Would you like to add a product manually, or let the AI assistant help you?</p>
+    
+    <a href="{% url 'shop:create_product' %}">
+      <button class="btn btn-manual">📝 Create Product Manually</button>
+    </a>
+
+    <a href="{% url 'shop:product_by_ai' %}">
+      <button class="btn btn-agent">🤖 Create Product with AI Agent</button>
+    </a>
+
+  </div>
+</body>
+</html>
